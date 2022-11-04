@@ -12,6 +12,14 @@
 // Testing & Integration
 // Planning
 
+let sdlc = [`planning`,
+`analysisOfRequirements`,
+`design`,
+`implementation`,
+`testingAndIntegration`,
+`maintain`]
+
+// console.log(sdlc)
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -24,3 +32,5 @@ const design = `The design stage is a necessary precursor to the main developer 
 const implementation = `The development/implementation stage is the part where developers actually write code and build the application according to the earlier design documents and outlined specifications.`
 const testingAndIntegration = `The developed code needs to be tested to make sure that there are no any bugs and that the end-user experience will not negatively be affected at any point. Once the testing is performed, different modules or designs will be ingtegrated into the primary source code through developer efforts, usually by leveraging training environments to detect future errors and defects.`
 const maintain = `Developers must now move into a maintenance mode and begin practicing any activities required to handle issues reported by end-users. Developers are also responsible for implementing any changes that the software might need after deployment.`
+
+// console.log(planning,analysisOfRequirements,design,implementation, testingAndIntegration,maintain)
