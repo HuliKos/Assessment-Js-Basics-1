@@ -49,8 +49,28 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 
-// CODE HERE
+// Create variables for total acres picked for each kind of apples.
+let fujiAcreTotal = 0
+let galaAcreTotal = 0
+let pinkAcreTotal = 0
 
+// To calculate the total acres picked for each kind of apples.
+for(i = 0; i < fujiAcres.length; i++){
+    fujiAcreTotal = fujiAcreTotal + fujiAcres[i]
+}
+
+for(i = 0; i < galaAcres.length; i++){
+    galaAcreTotal = galaAcreTotal + galaAcres[i]
+}
+
+for(i = 0; i < pinkAcres.length; i++){
+    pinkAcreTotal = pinkAcreTotal + pinkAcres[i]
+}
+
+// Calculate the toal acres picked for all kinds of apples.
+let totalAcres = fujiAcreTotal + galaAcreTotal + pinkAcreTotal
+
+console.log(totalAcres)
 
 
 
@@ -67,9 +87,10 @@ const pinkPrice = .55
     Log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
+// Divide the total acres picked from all kinds of apple by the available days in a week.
+let averageDailyAcres = totalAcres / (fujiAcres.length)
 
-
+console.log(averageDailyAcres)
 
 
 
@@ -105,9 +126,15 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
+// As long as there are apples in the field
+while(acresLeft >0){
+    // add one more day for pickers to work
+        days += 1
+        // subtract the apples being picked in the current day
+        acresLeft -= averageDailyAcres
+    }
 
-
+console.log(days)
 
 // PROBLEM 4
 
@@ -133,16 +160,18 @@ let days = 0
     values to the new arrays.
 */
 
-// CODE HERE
+let tonPerAcre = 6.5
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+// Create copy of the daily pick for each kind of apples. 
+let fujiAcresCopy = fujiAcres.slice(0,7)
+let galaAcresCopy = galaAcres.slice(0,7)
+let pinkAcresCopy = pinkAcres.slice(0,7)
 
-
-
-
-
+// Using map function to multiple each acre picked in a day for each kind of apples with the weigh per acre.
+let fujiTons = fujiAcresCopy.map(x => x * tonPerAcre)
+let galaTons = galaAcresCopy.map(x => x * tonPerAcre)
+let pinkTons = pinkAcresCopy.map(x => x * tonPerAcre)
+console.log(fujiTons, galaTons, pinkTons)
 
 // PROBLEM 5
 
@@ -160,15 +189,28 @@ let days = 0
     Hint: there are 2000 pounds in a ton.
 */
 
-// CODE HERE 
+// Set up the variables for each kind of apples total pound within the week.
+let fujiTonsTotal = 0
+let galaTonsTotal = 0
+let pinkTonsTotal = 0
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+// To calculate the total tons picked for each kind of apples.
+for(i = 0; i < fujiTons.length; i++){
+    fujiTonsTotal += fujiTons[i]
+}
+for(i = 0; i < galaTons.length; i++){
+    galaTonsTotal += galaTons[i]
+}
+for(i = 0; i < pinkTons.length; i++){
+    pinkTonsTotal += pinkTons[i]
+}
 
+// Covert the tons to the pounds based on the hint.
+let fujiPounds = fujiTonsTotal * 2000
+let galaPounds = galaTonsTotal * 2000
+let pinkPounds = pinkTonsTotal * 2000
 
-
-
+console.log(fujiPounds, galaPounds, pinkPounds)
 
 
 // PROBLEM 6
@@ -187,16 +229,12 @@ let days = 0
     console. 
 */
 
-// CODE HERE
+//Multiple the total pounds for each kind of apples with their respective price per pound.
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * galaPrice
+let pinkProfit = pinkPounds * pinkPrice
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
-
-
-
-
-
+console.log(fujiProfit, galaProfit, pinkProfit)
 
 // PROBLEM 7
 
@@ -209,3 +247,6 @@ let days = 0
 */
 
 // CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+
+console.log(totalProfit)
