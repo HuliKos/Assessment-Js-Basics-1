@@ -9,7 +9,7 @@
     It should be a string containing your best definition of what Git is.
 */
 
-//CODE HERE
+let gitDefinition = `Git is a program.`
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,7 +17,7 @@
     It should be a string containing your best definition of what GitHub is.
 */
 
-//CODE HERE
+let gitHubDefinition = `GitHub is a website. It allows you to take your git repositories and upload/download them. It is essentially a cloud service for your git repositories.`
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -25,7 +25,7 @@
     It should be a string containing your best definition of what 'git init' does.
 */
 
-//CODE HERE
+let gitInitDefinition = `Initialize a local repository right here in this folder.`
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -33,7 +33,7 @@
     It should be a string containing your best definition of what 'git clone' does.
 */
 
-//CODE HERE
+let gitCloneDefinition = `Copy a repo from GitHub and put it on my machine.`
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -41,7 +41,7 @@
     It should be a string containing your best definition of what 'git status' does.
 */
 
-//CODE HERE
+let gitStatusDefinition = `Tell me about this repo.`
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -52,7 +52,7 @@
     It should be a string containing the code to add all files.
 */
 
-//CODE HERE
+let gitAddDefinition = `Add some files to be tracked.`
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -63,7 +63,7 @@
     It should be a string containing the code to commit using the message "initial commit".
 */
 
-//CODE HERE
+let gitCommitDefinition = `Create a snapshot of the files I am tracking.`
 
 
 //////////////////PROBLEM 8////////////////////
@@ -72,4 +72,4 @@
     It should be a string containing your best definition of what 'git push' does.
 */
 
-//CODE HERE
+let gitPushDefinition = `Put my local commits on GitHub.`
